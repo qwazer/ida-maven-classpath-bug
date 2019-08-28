@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.qwazer.demo</groupId>
+		<artifactId>libs-parent</artifactId>
+		<version>0-SNAPSHOT</version>
+    </parent>
+
+	<artifactId>lib-a</artifactId>
+    <version>0-SNAPSHOT</version>
+
+	<properties>
+		<docker-client.version>6.1.1-PA1</docker-client.version>
+    </properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+
+		<dependency>
+			<groupId>com.spotify</groupId>
+			<artifactId>docker-client</artifactId>
+			<version>${docker-client.version}</version>
+			<scope>test</scope>
+			<classifier>shaded</classifier>
+		</dependency>
+
+
+    </dependencies>
+
+</project>
