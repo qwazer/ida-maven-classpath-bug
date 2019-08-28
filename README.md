@@ -1,6 +1,6 @@
 ## What's this?
 
-This is demo project to show bug in IDEA.
+This is demo project to report bug [IDEA-221549](https://youtrack.jetbrains.com/issue/IDEA-221549) IDEA incorrectly build internal classpath of maven multi-module project and shows false positive compilation errors .
 
 
 ## What steps will reproduce the issue?
